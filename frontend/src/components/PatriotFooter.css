@@ -1,0 +1,187 @@
+.patriot-site-footer {
+  --footer-bg: #f0f4f1;
+  --footer-text: #1b3025;
+  --footer-muted: #53685b;
+  --footer-border: #d3dfd6;
+  --footer-accent: #087f62;
+
+  margin-top: 64px;
+  border-top: 3px solid var(--footer-accent);
+  background: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+html[data-theme="dark"] .patriot-site-footer {
+  --footer-bg: #101a16;
+  --footer-text: #eef5ef;
+  --footer-muted: #b0c0b5;
+  --footer-border: #34443a;
+  --footer-accent: #65d8ad;
+}
+
+.patriot-footer-main,
+.patriot-footer-bottom,
+.patriot-footer-disclaimer {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.patriot-footer-main {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 2fr;
+  gap: 56px;
+  padding-block: 48px;
+}
+
+.patriot-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--footer-text);
+  text-decoration: none;
+}
+
+.patriot-footer-symbol {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--footer-accent);
+  color: white;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.patriot-footer-logo strong,
+.patriot-footer-logo small {
+  display: block;
+}
+
+.patriot-footer-logo strong {
+  font-size: 19px;
+  letter-spacing: 0.1em;
+}
+
+.patriot-footer-logo small {
+  margin-top: 5px;
+  color: var(--footer-muted);
+  font-size: 9px;
+  letter-spacing: 0.07em;
+}
+
+.patriot-footer-brand > p {
+  max-width: 300px;
+  margin: 20px 0 14px;
+  color: var(--footer-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.patriot-footer-caption {
+  color: var(--footer-muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.patriot-footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.patriot-footer-group h2 {
+  margin: 0 0 18px;
+  font-size: 11px;
+  letter-spacing: 0.09em;
+}
+
+.patriot-footer-group ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.patriot-footer-group a {
+  display: inline-block;
+  color: var(--footer-muted);
+  font-size: 12px;
+  line-height: 1.6;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 150ms ease, transform 150ms ease;
+}
+
+.patriot-footer-group a:hover {
+  color: var(--footer-accent);
+  transform: translateX(3px);
+}
+.patriot-site-footer a:focus-visible {
+  outline: 2px solid var(--footer-accent);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+.patriot-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-block: 20px;
+  border-top: 1px solid var(--footer-border);
+  color: var(--footer-muted);
+  font-size: 11px;
+}
+.patriot-footer-watermark strong {
+  color: var(--footer-accent);
+}
+.patriot-footer-top {
+  color: var(--footer-text);
+  text-decoration: none;
+}
+.patriot-footer-top:hover {
+  color: var(--footer-accent);
+}
+.patriot-footer-disclaimer {
+  padding-block: 16px 22px;
+  border-top: 1px solid var(--footer-border);
+  color: var(--footer-muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+@media (max-width: 950px) {
+  .patriot-footer-main {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .patriot-footer-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 22px;
+  }
+}
+@media (max-width: 480px) {
+  .patriot-footer-main,
+  .patriot-footer-bottom,
+  .patriot-footer-disclaimer {
+    width: calc(100% - 32px);
+  }
+
+  .patriot-footer-main {
+    padding-block: 34px;
+  }
+  .patriot-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .patriot-site-footer *,
+  .patriot-site-footer *::before,
+  .patriot-site-footer *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,560 @@
+.department-approvals-page {
+  width: 100%;
+
+  padding: 32px;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+
+.department-approvals-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 24px;
+
+  margin-bottom: 30px;
+}
+
+.department-approvals-eyebrow {
+  margin: 0 0 9px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+  letter-spacing: 1.5px;
+}
+
+.department-approvals-header h1 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  font-weight: 750;
+
+  letter-spacing: -0.6px;
+}
+
+.department-approvals-header p:last-child {
+  margin: 9px 0 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+.department-approvals-refresh {
+  min-height: 44px;
+
+  padding: 11px 18px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  background: var(--surface);
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+}
+
+.department-approvals-refresh:hover {
+  border-color: var(--accent);
+
+  color: var(--accent);
+}
+
+.department-approvals-refresh:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* SUMMARY */
+
+.department-approval-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-bottom: 24px;
+}
+
+.department-approval-summary > div {
+  min-height: 112px;
+
+  padding: 20px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 13px;
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow);
+}
+
+.department-approval-summary span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+.department-approval-summary strong {
+  display: block;
+
+  color: var(--text);
+
+  font-size: 29px;
+
+  line-height: 1;
+
+  font-weight: 750;
+}
+
+/* FILTERS */
+
+.department-approval-filters {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-bottom: 23px;
+}
+
+.department-approval-filters button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  min-height: 40px;
+
+  padding: 8px 14px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  background: var(--surface);
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.department-approval-filters button:hover {
+  border-color: var(--accent);
+}
+
+.department-approval-filters button.active {
+  border-color: var(--accent);
+
+  background: var(--accent-soft);
+
+  color: var(--accent);
+}
+
+.department-approval-filters button span {
+  min-width: 22px;
+
+  padding: 3px 6px;
+
+  border-radius: 10px;
+
+  background: var(--surface-soft);
+
+  color: var(--muted);
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+/* CARD */
+
+.department-approval-card {
+  margin-bottom: 17px;
+
+  padding: 23px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  background: var(--surface);
+
+  color: var(--text);
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.035);
+}
+
+.department-approval-card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 21px;
+}
+
+.department-approval-id {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  letter-spacing: 0.4px;
+}
+
+.department-approval-card-header h3 {
+  margin: 8px 0 5px;
+
+  color: var(--text);
+
+  font-size: 20px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+.department-approval-card-header p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+/* STATUS */
+
+.department-approval-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 30px;
+
+  padding: 6px 11px;
+
+  border: 1px solid transparent;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 750;
+}
+
+.status-pending {
+  border-color: rgba(154, 103, 0, 0.3);
+
+  background: var(--warning-soft);
+
+  color: var(--warning);
+}
+
+.status-approved {
+  border-color: rgba(24, 121, 78, 0.3);
+
+  background: var(--success-soft);
+
+  color: var(--success);
+}
+
+.status-rejected {
+  border-color: rgba(180, 35, 24, 0.3);
+
+  background: var(--danger-soft);
+
+  color: var(--danger);
+}
+
+/* DETAILS */
+
+.department-approval-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 19px;
+
+  padding: 19px 0;
+
+  border-top: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.department-approval-details div {
+  min-width: 0;
+}
+
+.department-approval-details span,
+.department-approval-notes span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.4;
+}
+
+.department-approval-details strong {
+  display: block;
+
+  overflow-wrap: anywhere;
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  font-weight: 650;
+}
+
+/* NOTES */
+
+.department-approval-notes {
+  margin-top: 18px;
+
+  padding: 15px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  background: var(--surface-soft);
+}
+
+.department-approval-notes p {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+/* ACTIONS */
+
+.department-approval-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 21px;
+}
+
+.department-approval-actions button {
+  min-height: 43px;
+
+  min-width: 130px;
+
+  padding: 10px 16px;
+
+  border: 1px solid transparent;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.department-approval-actions button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.department-approval-reject {
+  border-color: rgba(180, 35, 24, 0.3) !important;
+
+  background: var(--danger-soft);
+
+  color: var(--danger);
+}
+
+.department-approval-approve {
+  background: var(--accent);
+
+  color: #ffffff;
+}
+
+:root[data-theme="dark"]
+.department-approval-approve {
+  color: #102017;
+}
+
+.department-approval-approve:hover {
+  background: var(--accent-strong);
+}
+
+/* MESSAGES */
+
+.department-approvals-success,
+.department-approvals-error,
+.department-approvals-empty,
+.department-approvals-message {
+  margin-bottom: 19px;
+
+  padding: 19px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 11px;
+
+  background: var(--surface);
+
+  color: var(--text);
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.department-approvals-success {
+  border-color: rgba(24, 121, 78, 0.3);
+
+  background: var(--success-soft);
+
+  color: var(--success);
+}
+
+.department-approvals-error {
+  border-color: rgba(180, 35, 24, 0.3);
+
+  background: var(--danger-soft);
+
+  color: var(--danger);
+}
+
+.department-approvals-empty {
+  padding: 48px 20px;
+
+  text-align: center;
+}
+
+.department-approvals-empty h3 {
+  margin: 0 0 8px;
+
+  color: var(--text);
+
+  font-size: 19px;
+}
+
+.department-approvals-empty p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .department-approval-summary {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .department-approval-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .department-approvals-page {
+    padding: 20px 16px;
+  }
+
+  .department-approvals-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .department-approvals-header h1 {
+    font-size: 27px;
+  }
+
+  .department-approval-summary {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .department-approval-card {
+    padding: 18px;
+  }
+
+  .department-approval-card-header {
+    flex-direction: column;
+  }
+
+  .department-approval-actions {
+    flex-direction: column;
+  }
+
+  .department-approval-actions button {
+    width: 100%;
+  }
+}

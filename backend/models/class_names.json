@@ -1,0 +1,18 @@
+{
+  "civic_issues": [
+    "garbage",
+    "open_manhole",
+    "potholes",
+    "road_normal",
+    "streetlight_bad",
+    "streetlight_good"
+  ],
+  "disasters_accidents": [
+    "Damaged_Infrastructure",
+    "Fire_Disaster",
+    "Human_Damage",
+    "Land_Disaster",
+    "Non_Damage",
+    "Water_Disaster"
+  ]
+}
